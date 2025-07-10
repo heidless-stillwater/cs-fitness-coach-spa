@@ -4,8 +4,8 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 500 50"
-      width="500"
+      viewBox="0 0 300 50"
+      width="300"
       height="40"
       {...props}
     >
