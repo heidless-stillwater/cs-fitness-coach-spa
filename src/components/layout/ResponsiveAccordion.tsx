@@ -20,7 +20,7 @@ type ResponsiveAccordionProps = {
 };
 
 export function ResponsiveAccordion({ items }: ResponsiveAccordionProps) {
-  const isMobile = useBreakpoint(1000);
+  const isMobile = useBreakpoint(1500);
 
   if (isMobile === undefined) {
     // Render nothing or a loader on the server/initial client render
