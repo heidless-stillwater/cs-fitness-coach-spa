@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Menu, Phone, ChevronDown } from 'lucide-react';
+import { Menu, ChevronDown } from 'lucide-react';
 import { Logo } from '@/components/Logo';
 import { useState, useEffect } from 'react';
 
@@ -141,31 +141,12 @@ export function Header() {
                   <Logo />
                 </Link>
                 {renderNavLinks(true)}
-                <a
-                  href="tel:11112223333"
-                  className="flex items-center gap-2 text-sm font-semibold text-primary mt-4"
-                >
-                  <Phone className="h-4 w-4" />
-                  111-122-23333
-                </a>
               </nav>
             </SheetContent>
           </Sheet>
         ) : (
           <nav className="hidden items-center gap-6 text-base md:flex">
             {renderNavLinks()}
-            <div className="flex items-center gap-4">
-              <a
-                href="tel:11112223333"
-                className="flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-              >
-                <Phone className="h-4 w-4" />
-                111-122-23333
-              </a>
-              <Link href="#workout-generator">
-                <Button>Get Started</Button>
-              </Link>
-            </div>
           </nav>
         )}
       </div>
