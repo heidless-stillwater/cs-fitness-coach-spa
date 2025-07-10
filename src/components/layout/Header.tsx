@@ -12,6 +12,7 @@ import {
 import { Menu, ChevronDown } from 'lucide-react';
 import { Logo } from '@/components/Logo';
 import { useState, useEffect } from 'react';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 const navLinks = [
   { href: '#features', label: 'Features' },
@@ -122,33 +123,39 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2">
           <Logo />
         </Link>
-
-        {isMobile ? (
-          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle navigation menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <nav className="grid gap-6 text-lg font-medium mt-8">
-                <Link
-                  href="/"
-                  onClick={handleLinkClick}
-                  className="flex items-center gap-2 text-lg font-semibold mb-4"
-                >
-                  <Logo />
-                </Link>
-                {renderNavLinks(true)}
-              </nav>
-            </SheetContent>
-          </Sheet>
-        ) : (
+        <div className="flex items-center gap-4">
           <nav className="hidden items-center gap-6 text-base md:flex">
             {renderNavLinks()}
           </nav>
-        )}
+          <div className="hidden md:block">
+            <ThemeToggle />
+          </div>
+          {isMobile && (
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right">
+                <nav className="grid gap-6 text-lg font-medium mt-8">
+                  <Link
+                    href="/"
+                    onClick={handleLinkClick}
+                    className="flex items-center gap-2 text-lg font-semibold mb-4"
+                  >
+                    <Logo />
+                  </Link>
+                  {renderNavLinks(true)}
+                </nav>
+                <div className="absolute bottom-4 right-4">
+                    <ThemeToggle />
+                </div>
+              </SheetContent>
+            </Sheet>
+          )}
+        </div>
       </div>
     </header>
   );
