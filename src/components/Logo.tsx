@@ -12,7 +12,7 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
       <text
         x="10"
         y="35"
-        fontFamily="'Poppins', sans-serif"
+        fontFamily="'Montserrat', sans-serif"
         fontSize="30"
         fontWeight="bold"
         fill="hsl(var(--primary))"
@@ -22,7 +22,7 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
       <text
         x="115"
         y="35"
-        fontFamily="'Poppins', sans-serif"
+        fontFamily="'Montserrat', sans-serif"
         fontSize="30"
         fontWeight="normal"
         fill="hsl(var(--foreground))"
