@@ -5,7 +5,7 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 300 50"
-      width="150"
+      width="1000"
       height="40"
       {...props}
     >
