@@ -5,12 +5,12 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 200 50"
-      width="140"
+      width="150"
       height="40"
       {...props}
     >
       <text
-        x="10"
+        x="0"
         y="35"
         fontFamily="'Montserrat', sans-serif"
         fontSize="30"
@@ -20,7 +20,7 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
         Achieve
       </text>
       <text
-        x="115"
+        x="105"
         y="35"
         fontFamily="'Montserrat', sans-serif"
         fontSize="30"
